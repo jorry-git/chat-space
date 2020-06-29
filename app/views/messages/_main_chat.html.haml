@@ -9,4 +9,29 @@
       =link_to "#" do
         Edit
   .chat-main__message-list
+    .messagebox
+      .messageinfo
+        .message-list__username
+          masa
+        .message-list__date
+          2020年6月29日
+      .message
+        .message__coment
+          こんにちは
+    .messagebox
+      .messageinfo
+        .message-list__username
+          masa
+        .message-list__date
+          2020年6月29日
+      .message
+        .message__coment
+          こんにちは
   .chat-main__message-form
+    .form
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type:"file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn", value: "SEND"} 
