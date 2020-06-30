@@ -4,7 +4,9 @@
       .group__team-name
         name
       .group__member-name
-        masa
+        Member :
+        %name
+          masa
     .group-info__edit
       =link_to "#" do
         Edit
@@ -34,4 +36,4 @@
         %label{class: "input-box__image"}
           = icon('fas', 'image')
           %input{type:"file", class: "input-box__image__file"}
-      %input{type: "submit", class: "submit-btn", value: "SEND"} 
+      %input{type: "submit", class: "submit-btn", value: "Send"} 
