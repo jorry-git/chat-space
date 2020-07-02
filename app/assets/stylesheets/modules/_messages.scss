@@ -22,7 +22,7 @@
       color: #38aef0;
     }
 
-    .group-info__edit{
+    &__edit{
       margin: 28px 0;
       padding: 0 20px;
       border: 1px solid #38aef0;
@@ -32,15 +32,15 @@
       
     }
 
-    .group-info__group{
+    &__group{
       
-      .group__team-name{
+      &____team-name{
         margin-top: 35px;
         color: #333333;
         font-size: 20px;
       }
 
-      .group__member-name{
+      &__member-name{
         margin-top: 15px;
         font-size: 12px;
         color: #999999;
