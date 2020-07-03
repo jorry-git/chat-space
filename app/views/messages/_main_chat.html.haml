@@ -1,18 +1,18 @@
 .chat-main
-  .chat-main__group-info
-    .group-info__group
+  .chat-main__rightheader
+    .rightheader__group
       .group__team-name
         name
-      .group__member-name
-        Member :
-        %name
+      %ul.group__member-name
+        Member : 
+        %li.name
           masa
-    .group-info__edit
+    .rightheader__edit
       =link_to "#" do
         Edit
   .chat-main__message-list
-    .messagebox
-      .messageinfo
+    .message-box
+      .message-info
         .message-list__username
           masa
         .message-list__date
@@ -20,16 +20,16 @@
       .message
         .message__coment
           こんにちは
-    .messagebox
-      .messageinfo
+    .message-box
+      .message-info
         .message-list__username
-          masa
+          taka
         .message-list__date
-          2020年6月29日
+          2020年7月4日
       .message
-        .message__coment
-          こんにちは
-  .chat-main__message-form
+        .message__comment
+          おはようございます。
+  .chat-main__footer
     .form
       .input-box
         %input{type: "text", class: "input-box__text", placeholder: "type a message"}
