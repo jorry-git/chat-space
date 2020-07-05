@@ -2,38 +2,22 @@
   .chat-main__rightheader
     .rightheader__group
       .group__team-name
-        name
+        =@group.name
       %ul.group__member-name
         Member : 
         %li.name
-          masa
+          -@group.users.each do |user|
+            = user.name
     .rightheader__edit
-      =link_to "#" do
+      =link_to edit_group_path(@group) do
         Edit
   .chat-main__message-list
-    .message-box
-      .message-info
-        .message-list__username
-          masa
-        .message-list__date
-          2020年6月29日
-      .message
-        .message__coment
-          こんにちは
-    .message-box
-      .message-info
-        .message-list__username
-          taka
-        .message-list__date
-          2020年7月4日
-      .message
-        .message__comment
-          おはようございます。
+    = render @messages
   .chat-main__footer
-    .form
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type:"file", class: "input-box__image__file"}
-      %input{type: "submit", class: "submit-btn", value: "Send"} 
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
+          = icon('fas', 'image', class: 'form__icon')
+          = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'Send', class: 'submit-btn' 
